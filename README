@@ -1,0 +1,14 @@
+# Traefik as Ingress Controller in Kubernetes
+## Deployment Strategy
+
+![Traefik](https://github.com/traefik/traefik/raw/master/docs/content/assets/img/traefik.logo.png  ) 
+
+Traefik v2 it's implemented via CDR [(Customs Resource Definitions)](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/ "(Customs Resource Definitions)") so it can be deployed with his own controller in a Kubernete Cluster.
+
+## Steps
+
+1. [Deploy a CDR for Kubernetes](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/ "Deploy a CDR for Kubernetes") 
+2. Create a node port to access the Traefik Controller.
+3. Delcare Service Account and deploy Traefik image. 
+4. Deploy app and service 
+5. Create ingress route for service
